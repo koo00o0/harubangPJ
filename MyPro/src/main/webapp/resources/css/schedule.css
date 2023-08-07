@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* 제주여행 Page banner */
+
+.bannerWrap{
+    font-family: 'Noto Serif KR', serif;
+}
+
+.bannerWrap .bn{
+    display: block;
+    width:100%; 
+    height:60vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.bannerWrap .titleWrap{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 25vh;
+}
+
+.bannerWrap .titleWrap h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+
+.bannerWrap .titleWrap h2{
+    font-size: 90px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.bannerWrap .titleWrap .button{
+    text-align: center;
+}
+
+.bannerWrap .titleWrap input{
+    color: #eec06c;
+    border:2px solid #eec06c;
+    background-color:transparent;
+    width: 200px;
+    height: 50px;
+    /* border: none; */
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    border-radius: 2px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+/* 제주여행 MAIN CSS */
+
+.searchWrap{
+    margin-top: 30px;
+    text-align: center;
+    /* letter-spacing: 2px; */
+}
+
+.searchWrap p{
+    margin: 20px 0;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+}
+
+.searchBar{
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    height: 60px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.searchBar .serchInput{
+    width: 100%;
+    height: 100%;
+    border: solid 1px #D5D5D5;
+    font-size: 20px;
+    font-family: 'Noto Serif KR', serif;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+
+.searchBar input.button-add {
+    background: url( "../images/icon/search.png" ) no-repeat;
+    border: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer; 
+    position: absolute;  
+    display: block;
+    right: 10px;
+    top: 50%;
+    transform:translateY(-50%);
+    background-size: cover;
+}
+
+.menuWrap{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.menuWrap ul li{
+    float: left;
+    width: calc(100%/3);
+    height: 50px;
+    display: flex;justify-content: center;align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.menuWrap ul li.active{
+    background-color: #EEC06C;
+    color: white;
+    
+}
+
+.footer{
+    margin-top: 50px;
+}
+
+

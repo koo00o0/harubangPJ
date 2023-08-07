@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.harubang.info.InfoMapper">
+
+	<resultMap type="com.project.harubang.info.InfoDTO" id="InfoMap">
+		<!-- id property 속성은 반드시 중복되지 않는 유일한 값을 가져야 합니다. 중복 사용하지 않도록 주의해주세요. -->
+		<id property="itemId" column="itemId" />
+		<result property="id" column="id" />
+		<result property="itemName" column="itemName" />
+		<result property="addressId" column="addressId" />
+		<result property="checkId" column="checkId" />
+		<result property="likeCnt" column="likeCnt" />
+		<result property="imgfile" column="imgfile" />
+		<result property="detail" column="detail" />
+		<result property="sort" column="sort" />
+		<result property="wish" column="wish" />
+	</resultMap>
+	
+	<resultMap type="com.project.harubang.info.InfoAddressDTO" id="InfoAddressMap">
+		<id property="addressId" column="addressId" />
+		<result property="addressName" column="addressName" />
+		<result property="latitude" column="latitude" />
+		<result property="longitude" column="longitude" />
+	</resultMap>
+	
+	<resultMap type="com.project.harubang.info.InfoHeartCheck" id="InfoHeartCheck">
+		<result property="id" column="id" />
+		<result property="wish" column="wish" />
+		<result property="checkId" column="checkId" />
+	</resultMap>
+	
+	<resultMap type="com.project.harubang.info.InfoResultVO" id="InfoResultVO">
+		<collection property="infoDTO" resultMap="InfoMap"></collection>
+		<collection property="infoAddressDTO" resultMap="InfoAddressMap"></collection>
+		<collection property="InfoHeartCheck" resultMap="InfoHeartCheck"></collection>
+	</resultMap>
+	
+	<select id="infoList" resultMap="InfoResultVO">
+		(SELECT * FROM hb_travel, hb_address 
+		WHERE hb_travel.addressId = hb_address.addressId) 
+		UNION 
+		(SELECT * FROM hb_hotel, hb_address 
+		WHERE hb_hotel.addressId = hb_address.addressId)
+		UNION 
+		(SELECT * FROM hb_food, hb_address 
+		WHERE hb_food.addressId = hb_address.addressId)
+	</select>
+	
+	
+	<select id="itemIdCheck" resultMap="InfoResultVO">
+		(SELECT * FROM hb_travel, hb_address 
+		WHERE hb_travel.addressId = hb_address.addressId and itemId=#{id}) 
+		UNION 
+		(SELECT * FROM hb_hotel, hb_address 
+		WHERE hb_hotel.addressId = hb_address.addressId and itemId=#{id})
+		UNION 
+		(SELECT * FROM hb_food, hb_address 
+		WHERE hb_food.addressId = hb_address.addressId and itemId=#{id})
+	</select>
+	
+	<select id="heartCheck" resultType="com.project.harubang.info.InfoHeartCheck" parameterType="hashMap">
+   		 SELECT * FROM hb_check WHERE ID=#{id} AND CHECKID=#{checkId} 
+	</select>
+
+ 	<insert id="heartSuccess">
+		INSERT INTO HB_CHECK VALUES (#{checkId}, 'SUCCESS',#{id})
+	</insert>
+	
+	<update id="heartUpdate">
+		UPDATE HB_CHECK SET WISH=#{wish} WHERE ID=#{id} AND CHECKID=#{checkId}
+	</update> 
+	
+	<select id="getHeart" resultType="com.project.harubang.info.InfoHeartCheck" parameterType="hashMap">
+   		 SELECT * FROM hb_check WHERE ID=#{id} ; 
+	</select>
+</mapper>

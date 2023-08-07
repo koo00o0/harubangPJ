@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.harubang.user.UserMapper">
+
+	<select id="joinIdCheck"
+		resultType="com.project.harubang.user.UserVO">
+		SELECT * FROM HB_USER WHERE ID=#{id}
+	</select>
+
+	<insert id="join">
+		INSERT INTO HB_USER
+		VALUES(#{id},#{pw},#{name},#{birthday},#{email},
+		#{phone},#{gender})
+	</insert>
+
+	<select id="login" resultType="com.project.harubang.user.UserVO">
+		SELECT * FROM HB_USER WHERE
+		ID=#{id} AND PW=#{pw}
+	</select>
+	
+	<select id="idFind" resultType="com.project.harubang.user.UserVO">
+		SELECT ID FROM HB_USER WHERE
+		NAME=#{name} AND EMAIL=#{email} AND PHONE=#{phone} 
+	</select>
+	
+	<select id="pwFind" resultType="com.project.harubang.user.UserVO">
+		SELECT * FROM HB_USER WHERE
+		ID=#{id} AND EMAIL=#{email} AND PHONE=#{phone} 
+	</select>
+	
+	<update id="pwFindChange">
+		UPDATE HB_USER SET PW=#{pw} Where ID=#{id}
+	</update>
+
+	<select id="myPage"
+		resultType="com.project.harubang.user.UserVO">
+		SELECT * FROM HB_USER WHERE ID=#{id}
+	</select>
+
+	<update id="myPwInfo">
+		UPDATE HB_USER SET PW=#{pw} Where ID=#{id}
+	</update>
+	
+	<update id="myEmInfo">
+		UPDATE HB_USER SET EMAIL=#{email} Where ID=#{id}
+	</update>
+	
+	<update id="myPhInfo">
+		UPDATE HB_USER SET PHONE=#{phone} Where ID=#{id}
+	</update>
+	
+</mapper>

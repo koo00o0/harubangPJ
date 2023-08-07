@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* LOGIN PAGE */
+
+.loginWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 900px;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.loginWrap .logo img{
+    width: 350px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.loginBox{
+    /* border: 1px solid #D5D5D5; */
+    width: 450px;
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginBox .idBox{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.loginBox #id{
+    width: 380px;
+    height: 45px;
+    border: 1px solid #D5D5D5;
+    border-radius: 5px;
+    padding-left: 35px;
+}
+
+.loginBox .idBox img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 5px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.loginBox .pwBox{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.loginBox #pw{
+    width: 380px;
+    height: 45px;
+    border: 1px solid #D5D5D5;
+    border-radius: 5px;
+    padding-left: 35px;
+}
+
+.loginBox .pwBox img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 5px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.loginBox .checkBox{
+    width: 380px;
+    height: 50px;
+    /* margin-bottom: 20px; */
+}
+
+.loginBox .checkBox p{
+    font-size: 12px;
+    color: #DB0000;
+    /* padding: 10px; */
+}
+
+.loginBox #login{
+    width: 380px;
+    height: 45px;
+    background-color: #EEC06C;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.menuWrap ul{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.menuWrap ul li{
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    flex-grow: 1;
+}
+
+.menuWrap ul li:after{
+    content: ""; display: block; position: absolute;
+    width: 1px;
+    height: 10px;
+    background-color: #D5D5D5;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+    .menuWrap ul li:last-child:after{
+    display: none;
+}
+
+.jejuImg{
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0 #ccc;
+    -webkit-box-shadow: 0 0 0 #ccc;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    border: 0 none;   
+    background: #fff;
+    width: 370px;
+}
+
+.jejuImg .slideWrap li{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 370px;
+    height: 150px;
+}
+
+.footerWrap p{
+    font-size: 12px;
+}

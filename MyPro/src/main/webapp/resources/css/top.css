@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* 공통 top 형식 */
+
+.top{
+    background:white;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
+    /* margin-bottom: 20px; */
+}
+
+.top .loginWrap{
+    width: 100%;
+    height: 25px;
+    border-bottom: solid 1px #e2e2e2;
+}
+
+.top .loginWrap ul{
+    float: right;
+}
+
+.top .loginWrap li{
+    padding: 3px 20px;
+    float: left;
+    display: block;
+    position: relative;
+    /* width: 150px; */
+    font-size: 12px;
+    text-align: center;
+}
+
+.top .navWrap{
+    /* height: 35px;  */
+    height: 75px;
+}
+.top h1 a .logo{
+    padding: 6px 10px;
+    margin-top: 10px;
+    display: block;
+    height: 65px;
+    object-fit: cover;
+    float: left;
+    margin-left: 20px;
+}
+
+.top .gnb{float: right;}
+.top .gnb li{
+    float: left;
+    display: block;
+    position: relative;
+    width: 170px;
+    text-align: center;
+}
+.top .gnb li a{
+    line-height: 75px;
+    text-align: center;
+    display: inline-block;
+    height: 75px; 
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* 로그인 후 메뉴바 */
+.dropbtn{
+	font-size: 12px;
+}
+
+.dropdownWrap{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 150px;
+}
+
+.dropdownWrap .imgWrap img{
+    display: block;
+    width: 20px;
+    object-fit: contain;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.dropdown{
+    position : relative;
+    display : inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display : none;
+    position : absolute;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    width: 280px;
+    height: 130px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 7px 2px;
+    padding: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.userWrap{
+    display: flex;
+    align-items: center;
+}
+
+.userWrap img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.buttonWrap{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.buttonWrap input{
+    display: block;
+    flex-grow: 1;
+    margin: 0 3px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+

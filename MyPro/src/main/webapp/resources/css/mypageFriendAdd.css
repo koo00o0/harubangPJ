@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+input{
+    font-family: 'Noto Serif KR', serif;
+}
+
+.topMenuWrap{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin: 30px 0;
+}
+
+
+.topMenuWrap .menuWrap ul{
+    display: flex;
+    /* justify-content: end; */
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.topMenuWrap .menuWrap ul li{
+    padding: 5px;
+}
+
+.topMenuWrap .menuWrap .myImg{
+    height: 20px;
+    width: 20px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+}
+
+.topMenuWrap .menuWrap img{
+    display: block;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+
+/* Search Wrap */
+.searchWrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.searchWrap .searchID{
+    display: block;
+    width: 80%;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+}
+
+.searchWrap .searchButton{
+    display: block;
+    width: 20%;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    color: white;
+    background-color: #eec06c;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.requestWrap p{
+    font-size: 14px;
+    color: #DB0000;
+    font-weight: 500;
+}
+
+
+/* 목록 ITEM */
+.friendRequest img{
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+    
+.friendRequest{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 10px;
+    /* border: 1px solid #e2e2e2; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 3px 0px;
+    margin-bottom: 15px;
+}
+
+.friendRequest .item:nth-child(1){flex-grow: 0;}
+.friendRequest .item:nth-child(2){flex-grow: 1;}
+.friendRequest .item:nth-child(3){flex-grow: 0;}
+.friendRequest .item:nth-child(4){flex-grow: 0;}
+
+.friendRequest h5{
+    margin-left: 10px;
+}
+
+.friendRequest input{
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 5px;
+    /* background-color: white; */
+    font-size: 12px;
+}
+
+/* 친구목록 */
+
+.friendListWrap .frienList{
+    margin: 10px 0;
+    width: 100%;
+    height: 250px;
+    /* background-color: white; */
+    border-radius: 10px;
+    /* border: 1px solid #e2e2e2; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 4px 0px;
+    padding: 20px;
+}
+
+
+.requestListWrap .requestList{
+    margin: 10px 0;
+    width: 100%;
+    height: 200px;
+    /* background-color: white; */
+    border-radius: 10px;
+    /* border: 1px solid #e2e2e2; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 4px 0px;
+    padding: 20px;
+}

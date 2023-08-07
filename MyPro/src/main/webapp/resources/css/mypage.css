@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.mypageWrap{
+    /* height: 100%; */
+    font-family: 'Noto Serif KR', serif;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.mypageWrap .mypageBox{
+   /*  height: 100%; */
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.mypageBox .leftWrap{
+    /* height: 100%; */
+    width: 25vw;
+    position: relative;
+}
+
+.leftWrap img{
+    display: block;
+    width: 250px;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.leftWrap .userWrap{
+    margin: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftWrap .userWrap .img{
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.leftWrap .userWrap p{
+    color: #8C8C8C;
+}
+
+.mypageBox .leftWrap .bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #F9FBFC;
+}
+
+.mypageBox .rightWrap{
+    background-color: #F9FBFC;
+    /* height: 100%; */
+    width: 75vw;
+}
+
+.mypageBox .leftWrap .menuWrap{
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.mypageBox .leftWrap .menuWrap ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-left: 50px;
+}
+
+.mypageBox .leftWrap .menuWrap ul li{
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.mypageBox .leftWrap .menuWrap .bottomBar{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 80%;
+    transform: translateX(-50%);
+    background-color: #F9FBFC;
+}
+
+.mypageBox .imgBox{
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-image: url("../images/default/banner01.jpg");
+    background-repeat : no-repeat;
+    background-size: cover;
+}
+
+
+.mypageBox .footer{
+    margin-top: 30px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.rightWrap .infoWrap{
+
+    height: 100%;
+    width: 80vh;
+    padding: 50px;
+}

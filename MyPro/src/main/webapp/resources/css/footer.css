@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* 공통 FOOTER 형식 */
+
+.footer{
+    /* margin-top: 80px; */
+    background-color: #212121;
+    width: 100%;
+    height: 200px;
+    /* text-align: center; */
+    color: #BDBDBD;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.footerLogo{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.footerLogo img{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer .textWrap{
+    margin-top: 60px;
+    font-size: 14px;
+}

@@ -1,0 +1,204 @@
+@charset "utf-8";
+.topMenuWrap{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin: 30px 0;
+}
+
+.topMenuWrap .menuWrap ul{
+    display: flex;
+    /* justify-content: end; */
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.topMenuWrap .menuWrap ul li{
+    padding: 5px;
+}
+
+.topMenuWrap .menuWrap .myImg{
+    height: 20px;
+    width: 20px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+}
+
+.topMenuWrap .menuWrap img{
+    display: block;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+
+.editWrap{
+    width: 100%;
+    height: 250px;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.eitemWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.editWrap .item:nth-child(1){flex-grow: 0;}
+.editWrap .item:nth-child(2){flex-grow: 1;}
+.editWrap .item:nth-child(3){flex-grow: 0;}
+
+.eitemWrap .emailWrap{
+    margin-left: 20px;
+}
+
+.eitemWrap .emailWrap p{
+    color: #8C8C8C;
+}
+
+
+.editWrap .eitemWrap img{
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.editWrap .eitemWrap input{
+    border: 1px solid #e2e2e2;
+    font-family: 'Noto Serif KR', serif;
+    height: 30px;
+    width: 100px;
+    color: #8C8C8C;
+    cursor: pointer;
+}
+
+
+
+
+/* eitemWrapA  */
+.eitemWrapA{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.eitemWrapA .emailWrap{
+    margin-left: 20px;
+}
+
+.eitemWrapA .emailWrap p{
+    color: #8C8C8C;
+}
+
+
+.editWrap .eitemWrapA img{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.editWrap .eitemWrapA input{
+    border: 1px solid #e2e2e2;
+    font-family: 'Noto Serif KR', serif;
+    height: 30px;
+    width: 100px;
+    color: #8C8C8C;
+    cursor: pointer;
+}
+
+.eitemWrapA:last-child{border: none;}
+
+
+/* MYPAGE 수정 MODAL */
+input{
+    font-family: 'Noto Serif KR', serif;
+}
+
+.explainWrap{
+    font-family: 'Noto Serif KR', serif;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.explainWrap .explainBox{
+    width:350px;
+    height: 380px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+}
+
+.explainBox .changeWrap h3{
+    margin-bottom: 20px;
+}
+
+.explainBox .changeWrap p{
+    margin: 5px 0;
+    color: #8C8C8C;
+    margin-bottom: 20px;
+}
+
+.explainBox .changeWrap input{
+    width: 100%;
+    margin: 5px 0;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+}
+
+.explainBox .changeWrap #changeButtonInput{
+    width: 100%;
+    margin: 5px 0;
+    height: 40px;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eec06c;
+    color: white;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.explainBox .changeWrap #cancellButtonInput{
+    width: 100%;
+    margin: 5px 0;
+    height: 40px;
+    padding: 0px 10px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cancelWrap img{
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}

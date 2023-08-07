@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.harubang.userFriend.UserFriendMapper">
+
+	<select id="friendCheck"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_USER WHERE ID=#{id}
+	</select>
+
+	<insert id="friendRequest">
+		INSERT INTO HB_FriendRequest (SEND_ID, RECIVE_ID,
+		SUCCESS, REFUSE)
+		VALUES (#{id}, #{RECIVE_id}, 'Y', 'N')
+	</insert>
+
+	<select id="friendListCheck"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_FriendRequest WHERE SEND_ID=#{id} AND
+		RECIVE_ID=#{RECIVE_id} AND (SUCCESS="Y" or REFUSE = "N")
+	</select>
+	
+	<select id="friendListCheck2"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_FriendRequest WHERE SEND_ID=#{RECIVE_id} AND
+		RECIVE_ID=#{id} AND (SUCCESS="Y" or REFUSE = "N")
+	</select>
+
+	<select id="friendRequesting"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_FriendRequest WHERE SEND_ID=#{id} AND
+		SUCCESS="Y" AND REFUSE = "N"
+	</select>
+	
+	<delete id="requestCancel">
+		DELETE FROM HB_FriendRequest WHERE SEND_ID=#{id} AND
+		RECIVE_id=#{RECIVE_id} AND SUCCESS="Y" AND REFUSE = "N"
+	</delete>
+
+	<select id="friendRecive"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_FriendRequest WHERE RECIVE_ID=#{id} AND
+		SUCCESS="Y" AND REFUSE = "N"
+	</select>
+
+	<select id="friendList"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_FriendRequest WHERE RECIVE_ID=#{id} AND(
+		SUCCESS="Y" AND REFUSE = "Y")
+	</select>
+
+	<select id="friendList2"
+		resultType="com.project.harubang.userFriend.UserFriendVO">
+		SELECT * FROM HB_FriendRequest WHERE SEND_ID=#{id} AND(
+		SUCCESS="Y" AND REFUSE = "Y")
+	</select>
+	
+	<delete id="friendCencle">
+		DELETE FROM HB_FriendRequest WHERE (SEND_ID=#{id} or
+		RECIVE_id=#{RECIVE_id}) AND (SUCCESS="Y" AND REFUSE = "Y")
+	</delete>
+	
+	<delete id="friendCencle2">
+		DELETE FROM HB_FriendRequest WHERE (SEND_ID=#{send_id} or
+		RECIVE_id=#{id}) AND (SUCCESS="Y" AND REFUSE = "Y")
+	</delete>
+
+	<update id="acceptFriend">
+		UPDATE HB_FriendRequest SET REFUSE="Y" Where
+		SEND_ID=#{send_id} AND RECIVE_ID=#{id} AND REFUSE = "N"
+	</update>
+
+	<delete id="refuseFriend">
+		DELETE FROM HB_FriendRequest WHERE SEND_ID=#{send_id}
+		AND RECIVE_ID=#{id} AND SUCCESS="Y" AND REFUSE = "N"
+	</delete>
+	
+</mapper>
